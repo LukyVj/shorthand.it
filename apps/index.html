@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>shorthand it</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror/theme/monokai.css">
+</head>
+<body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="container frame">
+                <div class="header">
+                    <ul class=" nav-pills pull-right">
+                        <li class="active"><a href="#" class="material-btn-blue">Home</a></li>
+                        <li><a href="#" class="material-btn-blue">About</a></li>
+                    </ul>
+                    <h3 class="text-muted">shorthand.it</h3>
+                </div>
+
+                <div class="jumbotron bit-1">
+                    <h2>A fast method to get the shorthand version of your CSS</h2>
+                    <p class="lead">It's fast, free, and it'll always be.</p>
+                </div>
+
+                <div class="row example bit-1">
+                    <div class="bit-2">
+                        <header>
+                            <h3>From</h3>
+                        </header>
+                        <section>
+                            <textarea id="codeIn" name="codeIn" class="codemirror">
+.selector{  
+  background-color: #000;
+  background-image: url(images/bg.gif);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+                        </textarea>
+                    </section>
+
+                </div>
+
+                <div class="bit-2">
+                    <header>
+                        <h3>To</h3>
+                    </header>
+                    <section>
+                        <textarea name="codeOut" id="codeOut" class="codemirror">
+.selector{  
+  background: #000 url(images/bg.gif) no-repeat top right;
+}
+                    </textarea>
+                </section>
+
+            </div>
+
+            <section>
+                <a href="#" id="shit" class="material-btn-lightblue"> Shorthand it !</a>
+                <a href="#" id="shit" class="material-btn-lightgreen"> Shorthand done !</a>
+                <a href="#" id="shit" class="material-btn-red"> Issues in your code</a>
+            </section>
+        </div>
+
+        <div class="footer bit-1">
+            <p>♥ from a bunch of gitches</p>
+        </div>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script src="codemirror/mode/css/css.js"></script>
+    <script>
+
+        var editor = CodeMirror.fromTextArea(document.getElementById("codeIn"), {
+            lineNumbers: true,
+            styleActiveLine: true,
+            matchBrackets: true,
+            mode: "text/css"
+        });
+
+
+        var editor = CodeMirror.fromTextArea(document.getElementById("codeOut"), {
+            lineNumbers: true,
+            styleActiveLine: true,
+            matchBrackets: true,
+            mode: "text/css"
+
+        });
+
+    </script>
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
